@@ -3,7 +3,7 @@ import json, requests
 
 # add your own APIkey
 APIkey = 'b0dc5ff479faf43dff849169f51ad2b0'
-location = 'Bolzano'
+location = st.radio('insert city name here: ',('bozen','brixen','meran'))
 
 # check API documentation to see what structure of URL is needed to access the data
 # http://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
@@ -24,5 +24,5 @@ weatherData = json.loads(response.text)
 # from pprint import pprint 
 # pprint(weatherData) 
 
-st.text("current max temperature in Bolzano: ",weatherData['main']['temp_max'])
+st.text("current max temperature in ",location," is : ",weatherData['main']['temp_max'])
 # more???????????
