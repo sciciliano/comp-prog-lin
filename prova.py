@@ -2,7 +2,7 @@ import streamlit as st
 import json, requests 
 
 # add your own APIkey
-APIkey = 'b0dc5ff479faf43dff849169f51ad2b0'
+APIkey = 'xxx'
 location = st.radio('insert city name here: ',('bozen','brixen','meran'))
 
 # check API documentation to see what structure of URL is needed to access the data
