@@ -24,5 +24,5 @@ weatherData = json.loads(response.text)
 # from pprint import pprint 
 # pprint(weatherData) 
 
-st.text("current max temperature in Bolzano",str(weatherData['main']['temp_max'])) 
+st.text("current max temperature in Bolzano: ",weatherData['main']['temp_max'])
 # more???????????
