@@ -23,7 +23,7 @@ translator = Translator()
 input_str = st.text_input('type here some text!\t')
 input_lang = st.selectbox('type the language',('en','de','it','es'))
 trans_str= translator.translate(input_str, dest= input_lang)
-engine.say(trans_str)
+
 
 
 if (trans_str and input_lang):
