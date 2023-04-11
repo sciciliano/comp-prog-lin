@@ -13,3 +13,4 @@ tts1.save('helloworld.mp3')
 if (trans_str and input_lang):
     audio_file = open('helloworld.mp3','rb')
     st.audio(data=audio_file, format="audio/mp3", start_time=0)
+st.download_button(label="Download audio file", data=audio_file, file_name='helloworld.mp3',mime='audio/mp3')
