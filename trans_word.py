@@ -8,4 +8,4 @@ target_language = st.selectbox('Please select a language: ',('it','en','de','es'
 
 if (word and target_language):
   target_word = translator.translate(word ,dest=target_language)
-  st.write(target_word)
+  st.write(target_word.text)
