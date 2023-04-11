@@ -6,6 +6,6 @@ translator = Translator()
 word = st.text_input('ask me a word: ','')
 target_language = st.selectbox('Please select a language: ',('it','en','de','es'))
 
-if (language and target_language):
+if (word and target_language):
   target_word = translator.translate(word ,dest=target_language)
   st.write(target_word)
