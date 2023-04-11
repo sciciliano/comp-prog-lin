@@ -1,8 +1,16 @@
+from gtts import gTTS
+import json, requests
 import base64
- 
 import streamlit as st
- 
- 
+from googletrans import Translator
+
+translator = Translator()
+input_str = st.text_input('type here some text!\t')
+input_lang = st.selectbox('type the language',('en','de','it','es'))
+trans_str= translator.translate(input_str, dest= input_lang)
+tts1=gTTS(text= trans_str.text, lang= input_lang)
+tts1.save('helloworld.mp3')
+
 def autoplay_audio(file_path: str):
     with open(file_path, "rb") as f:
         data = f.read()
@@ -16,8 +24,7 @@ def autoplay_audio(file_path: str):
             md,
             unsafe_allow_html=True,
         )
- 
- 
-st.write("# Auto-playing Audio!")
- 
-autoplay_audio("local_audio.mp3")
+
+if (trans_str and input_lang):
+    audio_file = open('helloworld.mp3','rb')
+    autoplay_audio(audio_file)
