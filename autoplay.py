@@ -26,5 +26,4 @@ def autoplay_audio(file_path: str):
         )
 
 if (trans_str and input_lang):
-    audio_file = open('helloworld.mp3','rb')
     autoplay_audio(audio_file)
