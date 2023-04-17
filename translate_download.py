@@ -8,5 +8,6 @@ input_str = input_txt.getvalue().decode("utf-8")
 input_lang = st.selectbox('type the language',('en','de','it','es'))
 trans_str= translator.translate(input_str, dest= input_lang)
 
-st.write(trans_str)
+if (trans_str and input_lang):
+  st.write(trans_str)
 st.download_button(label="Download your translated file", data=trans_str, file_name='transfile.txt',mime='text/txt')
