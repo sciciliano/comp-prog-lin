@@ -1,3 +1,4 @@
+import streamlit as st
 import speech_recognition as sr
 
 r = sr.Recognizer()
@@ -6,4 +7,4 @@ with sr.AudioFile(file) as source:
     audio= r.record(source)
 
 recognized_text = r.recognize_google(audio)
-print(recognized_text)
+st.write(recognized_text)
