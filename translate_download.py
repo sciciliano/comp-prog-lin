@@ -11,4 +11,4 @@ trans_str= translator.translate(input_str, dest= input_lang)
 
 if (trans_str and input_lang):
     st.write(trans_str)
-    st.download_button(label="Download your translated file", data=trans_str, file_name='transfile.txt',mime='text/txt')
+    # st.download_button(label="Download your translated file", data=trans_str, file_name='transfile.txt',mime='text/txt')
