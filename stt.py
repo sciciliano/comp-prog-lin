@@ -1,4 +1,4 @@
-import speech_recognitions as sr
+import speech_recognition as sr
 
 r = sr.Recognizer()
 file = st.file_uploader("Upload file", type=['wav'])
