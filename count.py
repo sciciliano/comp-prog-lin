@@ -14,7 +14,7 @@ if st.session_state.counter < 1:
 translator = Translator()
 keywords = ['bella','lungo','agile']
 var = choice(keywords)
-
+st.write(var)
 def right_answer():
     st.write('Right!')
     st.session_state.counter = st.session_state.counter
@@ -26,7 +26,7 @@ def wrong_answer():
 adj_trans = translator.translate(var,dest='en')
 adj_answer = st.text_input('Write your answer here:','')
 
-if adj_answer is not None:
+if adj_answer:
     if adj_answer == adj_trans:
         right_answer()
     elif adj_answer  != adj_trans:
