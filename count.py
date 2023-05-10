@@ -25,6 +25,7 @@ def wrong_answer():
 
 adj_trans = translator.translate(var,dest='en')
 adj_answer = st.text_input('Write your answer here:','')
+st.write(adj_trans)
 
 if adj_answer:
     if adj_answer == adj_trans:
