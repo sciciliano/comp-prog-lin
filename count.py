@@ -24,7 +24,6 @@ def right_answer():
     
 def wrong_answer():
     st.write('Nope, try again!')
-    var = var
     st.session_state.counter -=1
 
 adj_trans = translator.translate(var,dest='en')
