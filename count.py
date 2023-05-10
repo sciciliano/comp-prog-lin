@@ -15,12 +15,16 @@ translator = Translator()
 keywords = ['bella','lungo','agile']
 var = choice(keywords)
 st.write(var)
+
+
 def right_answer():
     st.write('Right!')
+    var = choice(keywords)
     st.session_state.counter = st.session_state.counter
     
 def wrong_answer():
     st.write('Nope, try again!')
+    var = var
     st.session_state.counter -=1
 
 adj_trans = translator.translate(var,dest='en')
