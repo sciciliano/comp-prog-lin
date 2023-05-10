@@ -1,5 +1,5 @@
 googletrans==4.0.0-rc1
+audio-recorder-streamlit==0.0.8
 gTTS
 pyttsx3
 SpeechRecognition
-audio-recorder-streamlit==0.0.8
