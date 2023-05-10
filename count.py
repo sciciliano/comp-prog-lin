@@ -25,12 +25,12 @@ def wrong_answer():
 
 adj_trans = translator.translate(var,dest='en')
 adj_answer = st.text_input('Write your answer here:','')
-st.write(adj_trans)
+st.write(adj_trans.text)
 
 if adj_answer:
-    if adj_answer == adj_trans:
+    if adj_answer == adj_trans.text:
         right_answer()
-    elif adj_answer  != adj_trans:
+    elif adj_answer  != adj_trans.text:
         wrong_answer()
 
 st.write(st.session_state.counter)
