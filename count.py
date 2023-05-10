@@ -12,14 +12,13 @@ if st.session_state.counter < 1:
     st.stop()
 
 translator = Translator()
-keywords = ['bella','lungo','agile']
+keywords = ['alto','lungo','forte']
 var = choice(keywords)
 st.write(var)
 
 
 def right_answer():
     st.write('Right!')
-    var = choice(keywords)
     st.session_state.counter = st.session_state.counter
     
 def wrong_answer():
