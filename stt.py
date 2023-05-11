@@ -10,5 +10,6 @@ if audio_bytes:
     
 r = sr.Recognizer()
 
-recognized_text = r.recognize_google('my_audio.mp3')
-st.write(recognized_text)
+with 'my_audio.mp3' as audio:
+    recognized_text = r.recognize_google(audio)
+    st.write(recognized_text)
